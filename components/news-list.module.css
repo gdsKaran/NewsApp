@@ -1,0 +1,51 @@
+.newsList {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 0;
+}
+
+.newsList li {
+  position: relative;
+  list-style: none;
+}
+
+.newsList img {
+  transition: filter 0.3s;
+  width: 100%;
+  height: auto;
+}
+
+.newsList .hoverContent {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height:90%;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 10px;
+  box-sizing: border-box;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.newsList li:hover .imageContainer img {
+  filter: blur(5px);
+}
+
+.newsList li:hover .hoverContent {
+  display: flex;
+  opacity: 1;
+}
+
+.newsList .defaultDetails {
+  text-align: center;
+  margin-top: 10px;
+  
+}
